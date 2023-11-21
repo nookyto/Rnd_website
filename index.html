@@ -3,15 +3,28 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="UTF-8">
-            <title> 
-                RnD car thing
-            </title>
-            <link rel="stylesheet" href="style.css">
-            <!-- Boxicons CDN Link -->
-            <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-<body style="background-image: url('img_girl.jpg');">  
+          <title> 
+              RnD car thing
+          </title>
+          <link rel="stylesheet" href="style.css">
+          <!-- Boxicons CDN Link -->
+          <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        </head>
+<body>  
+  <video autoplay muted loop id="myVideo">
+    <source src="Hades Developers React to 25 Minute 'Fresh File' Speedrun.mp4" type="video/mp4">
+  </video>
+  <div class="content">
+    <!-- Use a button to pause/play the video with JavaScript -->
+    <button id="pausePlayBtn" onclick="PausePlayFunc()">    
+      <div id="lottie-container"></div>
+      <lottie-player src="https://lottie.host/58ce29fe-def6-4f2a-8824-9c9cc66b10b9/LtMN22vpcU.json" background="transparent"  speed="0"  style="width: 300px; height: 300px;" loop controls autoplay></lottie-player>
+      <!-- Button to trigger the animation -->
+      <button id="playButton">Play Animation</button></button>
+  </div>
   <div class="sidebar">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus icon'></i>
@@ -78,27 +91,6 @@
     </ul>
   </div>
 
-  <script>
-  let sidebar = document.querySelector(".sidebar");
-  let closeBtn = document.querySelector("#btn");
-  let searchBtn = document.querySelector(".bx-search");
-
-    sidebar.onmouseover = function() {
-        sidebar.classList.toggle("open");
-    };
-
-    sidebar.onmouseout = function() {
-        sidebar.classList.toggle("open");
-    };
-
-  // following are the code to change sidebar button(optional)
-  function menuBtnChange() {
-   if(sidebar.classList.contains("open")){
-     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
-   }else {
-     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
-   }
-  }
-  </script>
+  <script src = "script.js"></script>
 </body>
 </html>
