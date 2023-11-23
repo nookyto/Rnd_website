@@ -1,27 +1,24 @@
+let btn = document.querySelector("#btn");
 let sidebar = document.querySelector(".sidebar");
-let closeBtn = document.querySelector("#btn");
 let searchBtn = document.querySelector(".bx-search");
 
-  sidebar.onmouseover = function() {
-      sidebar.classList.toggle("open");
-  };
-
-  sidebar.onmouseout = function() {
-      sidebar.classList.toggle("open");
-  };
-
-
-  var video = document.getElementById("myVideo");
-  
-  var PPbtn = document.getElementById("pausePlayBtn");
-  
-  
-  play.onclick = function () {
-    PPbtn.play();
+sidebar.onmouseover = function() {
+    sidebar.classList.toggle("active");
 };
 
-stop.onclick = function () {
-  PPbtn.stop();
+sidebar.onmouseout = function() {
+    sidebar.classList.toggle("active");
 };
 
 
+function openVideo(videoSource) {
+  var videoPopup = document.getElementById('video-popup');
+  var video = videoPopup.querySelector('video');
+
+  // Set the source of the video
+  video.src = videoSource;
+
+  // Show the video popup
+  videoPopup.style.display = 'flex';
+  videoPopup.style.width = '90%'
+}
